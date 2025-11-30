@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Nag | SPA Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- STATIC NAVBAR (Never Reloads) -->
+    <nav class="navbar">
+       <!-- <div class="logo">Rahul Nag<span>.</span></div> -->
+        <ul class="nav-links">
+            <!-- onclick events call our JS function -->
+            <li><a href="#" onclick="loadContent('home')">Home</a></li>
+            <li><a href="#" onclick="loadContent('about')">About</a></li>
+            <li><a href="#" onclick="loadContent('projects')">Projects</a></li>
+            <li><a href="#" onclick="loadContent('contact')">Contact</a></li>
+        </ul>
+         <i class="fas fa-moon" id="theme-toggle" onclick="toggleTheme()"></i>
+    </nav>
+
+    <!-- DYNAMIC CONTENT AREA (Only this part refreshes) -->
+    <main id="app">
+        <!-- Content will be injected here by JavaScript -->
+    </main>
+
+    <!-- STATIC FOOTER (Never Reloads) -->
+    <footer>
+        <p>© 2025. Designed and Developed by Rahul Nag.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

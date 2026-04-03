@@ -162,7 +162,8 @@ p { font-size: 18px; color: var(--text-secondary); max-width: 600px; line-height
 .btn-card {
     padding: 8px 15px;
     font-size: 12px;
-    margin-top: 10px;
+    margin-top: auto;
+    align-self: center;
 }
 
 /* Card Styling (For Projects) */
@@ -392,6 +393,8 @@ form {
     transition: 0.3s ease;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card::before {

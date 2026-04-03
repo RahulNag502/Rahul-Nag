@@ -1,67 +1,92 @@
 // 1. Define the content for each section
+
 const pages = {
-   // Inside pages object in script.js
+   // Inside pages object in script.js <h3>I am a <span class="typing-text"></span></h3>  <p>I am a TYBScIT student building modern web applications.</p>
+            
 home: `
     <div class="fade-in home-container">
         <div class="home-content">
             <h3>Hello, I am</h3>
             <h1>Rahul Nag</h1>
-            <h3>I am a <span class="typing-text"></span></h3>
-            <p>I am a TYBScIT student building modern web applications.</p>
-            <a href="#" onclick="loadContent('projects')" class="btn">View My Work</a>
-            <a href="Rahulresume.docx" download class="btn" style="background:transparent; border: 2px solid #00d9ff; color: #00d9ff; margin-left:10px;">Download Resume</a>
+            <h3 class="subtitle-typing">I am a <span class="typing-text"></span></h3>
+            
+            <a href="#" onclick="loadContent('projects')" class="btn btn-primary">View My Work</a>
+            <a href="Resume_2026.docx" download class="btn btn-secondary">Download Resume</a>
         </div>
         
         <div class="home-img">
             <!-- Replace 'profile.png' with your actual file name -->
-            <img src="rahul.png" alt="Rahul Nag Profile">
+            <img src="rahul.png" alt="Rahul Nag Profile" class="profile-img-animated">
         </div>
     </div>
 `,
     about: `
-    <div class="fade-in">
+    <div class="fade-in about-container">
         <h1>About <span>Me</span></h1>
-        <p>I am an aspiring <strong>Full Stack Developer</strong> focused on understanding the complete software development lifecycle. I enjoy connecting <strong>interactive user interfaces</strong> with robust <strong>server-side logic</strong>.</p>
+        <p>Information Technology student with a strong interest in web development and software development. Experienced in building academic projects using HTML, CSS, JavaScript, PHP, MySQL, and Android Studio. Passionate about learning new technologies and developing practical applications through real-world projects.</p>
         <br>
-        <p><strong>Current Focus:</strong> Client-Server Architecture & End-to-End Application Flow.</p>
+        <p>Currently seeking opportunities to apply my skills and contribute to innovative projects in the field of web development and software engineering.</p>
+        <div class="achievements">
+            <div class="achievement-item">
+                <i class="fas fa-code"></i>
+                <h3>Full-Stack Development</h3>
+                <p>Building scalable web applications from frontend to backend</p>
+            </div>
+            <div class="achievement-item">
+                <i class="fas fa-users"></i>
+                <h3>Team Projects</h3>
+                <p>Collaborated on multiple production-ready systems</p>
+            </div>
+            <div class="achievement-item">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Continuous Learner</h3>
+                <p>Always exploring new technologies and best practices</p>
+            </div>
+        </div>
     </div>
 `,
     projects: `
     <div class="fade-in">
         <h1>My <span>Projects</span></h1>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;">
+        <div class="projects-grid">
             
            <!-- Card 1 -->
-<div style="background: var(--second-bg-color); padding: 20px; border-radius: 10px; border: 1px solid #333;">
-    <h3 style="color: var(--main-color);">Tic Tac Toe</h3>
-    <p style="font-size: 14px; margin: 10px 0;">Classic 2-player game with interactive logic.</p>
-    <div style="font-size: 12px; color: var(--text-secondary);">HTML • CSS • JavaScript</div>
-    <button class="btn" style="padding: 5px 15px; font-size: 12px; margin-top: 10px;">
-        <a href="https://rahulnag502.github.io/tic-tac-toe/">Live Demo</a>
-    </button>
+<div class="project-card project-card-frontend">
+    <div class="card-header"><span class="badge badge-frontend">Frontend</span></div>
+    <h3>Tic Tac Toe</h3>
+    <p>Classic 2-player game with interactive logic.</p>
+    <div class="tech-stack">HTML • CSS • JavaScript</div>
+    <a href="https://rahulnag502.github.io/tic-tac-toe/" class="btn btn-card">Live Demo</a>
 </div>
 
 <!-- Card 2 -->
-<div style="background: var(--second-bg-color); padding: 20px; border-radius: 10px; border: 1px solid #333;">
-    <h3 style="color: var(--main-color);">Airline Management System</h3>
-    <p style="font-size: 14px; margin: 10px 0;">Collaborative 2nd-year project with Aniket Singh. Manages flight bookings and admin dashboards.</p>
-    <div style="font-size: 12px; color: var(--text-secondary);">PHP • MySQL • Team Project</div>
-    <button class="btn" style="padding: 5px 15px; font-size: 12px; margin-top: 10px;">
-        <a href="https://github.com/Singhaniket2110/Mini-Airline-Project">GitHub Repo</a>
-    </button>
+<div class="project-card project-card-fullstack">
+    <div class="card-header"><span class="badge badge-fullstack">Full-Stack</span></div>
+    <h3>Airline Management System</h3>
+    <p>Collaborative 2nd-year project with Aniket Singh. Manages flight bookings and admin dashboards.</p>
+    <div class="tech-stack">PHP • MySQL • Team Project</div>
+    <a href="https://github.com/Singhaniket2110/Mini-Airline-Project" class="btn btn-card">GitHub Repo</a>
 </div>
 
 <!-- Card 3 -->
-<div style="background: var(--second-bg-color); padding: 20px; border-radius: 10px; border: 1px solid #333;">
-    <h3 style="color: var(--main-color);">Love & Date App</h3>
-    <p style="font-size: 14px; margin: 10px 0;">A playful interactive website where the "No" button mischievously evades clicks.</p>
-    <div style="font-size: 12px; color: var(--text-secondary);">HTML • CSS • JavaScript</div>
-    <button class="btn" style="padding: 5px 15px; font-size: 12px; margin-top: 10px;">
-        <a href="https://rahulnag502.github.io/date-me/">Live Demo</a>
-    </button>
+<div class="project-card project-card-frontend">
+    <div class="card-header"><span class="badge badge-frontend">Frontend</span></div>
+    <h3>Love & Date App</h3>
+    <p>A playful interactive website where the "No" button mischievously evades clicks.</p>
+    <div class="tech-stack">HTML • CSS • JavaScript</div>
+    <a href="https://rahulnag502.github.io/date-me/" class="btn btn-card">Live Demo</a>
 </div>
 
-    </div>
+<!-- Card 4 -->
+<div class="project-card project-card-fullstack">
+    <div class="card-header"><span class="badge badge-fullstack">Full-Stack</span></div>
+    <h3>NSS Volunteer Management System</h3>
+    <p>Individual 3rd-year project for managing NSS activities at Navneet College. Digital platform for volunteers, events, attendance, certificates, and communication.</p>
+    <div class="tech-stack">PHP • MySQL</div>
+    <a href="https://github.com/RahulNag502/Navneet_NSS_Management_System" class="btn btn-card">Private Repo</a>
+</div>
+
+        </div>
     `,
     // UPDATED CONTACT SECTION
     contact: `
@@ -118,8 +143,46 @@ function startTyping() {
                 setTimeout(typeWriter, 100); 
             }
         }
-        typeWriter();
+        // Small delay before starting typewriter
+        setTimeout(typeWriter, 300);
     }
+}
+
+// 6. Scroll-to-Top Function
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// 7. Show/Hide Back-to-Top Button on Scroll
+window.addEventListener('scroll', () => {
+    const backToTopBtn = document.getElementById('back-to-top');
+    if (window.scrollY > 300) {
+        backToTopBtn.style.display = 'block';
+    } else {
+        backToTopBtn.style.display = 'none';
+    }
+});
+
+// 8. Scroll-Triggered Animations with Intersection Observer
+function setupScrollAnimations() {
+    const options = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('scroll-animate');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+
+    // Observe all project cards and section elements
+    document.querySelectorAll('.project-card, .achievement-item').forEach(el => {
+        observer.observe(el);
+    });
 }
 
 // 4. Theme Toggle
@@ -174,5 +237,14 @@ async function submitForm(event) {
     });
 }
 
+// Initialize year in footer
+function updateYear() {
+    document.getElementById('year').textContent = new Date().getFullYear();
+}
+
 // Initial Load
-window.onload = () => loadContent('home');
+window.onload = () => {
+    loadContent('home');
+    updateYear();
+    setupScrollAnimations();
+};

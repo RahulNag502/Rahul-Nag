@@ -20,6 +20,7 @@
             <li><a href="#" onclick="loadContent('projects')">Projects</a></li>
             <li><a href="#" onclick="loadContent('contact')">Contact</a></li>
         </ul>
+       
          <i class="fas fa-moon" id="theme-toggle" onclick="toggleTheme()"></i>
     </nav>
 
@@ -30,7 +31,16 @@
 
     <!-- STATIC FOOTER (Never Reloads) -->
     <footer>
-        <p>© 2025. Designed and Developed by Rahul Nag.</p>
+        <div class="footer-content">
+            <div class="footer-social">
+                <a href="https://github.com/RahulNag502" target="_blank" rel="noopener noreferrer" title="GitHub" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/rahulnag502" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="social-link"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>© <span id="year"></span>. Designed and Developed by Rahul Nag.</p>
+            <button id="back-to-top" class="back-to-top" onclick="scrollToTop()" title="Back to top">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
     </footer>
 
     <script src="script.js"></script>
